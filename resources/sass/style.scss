@@ -1,0 +1,11 @@
+.stars {
+    display: inline-block;
+    label {
+        font-size: 30px;
+    }
+    input:checked ~ label {
+        color: #efd70c;
+    }}
+.stars * {
+    float: right;
+}

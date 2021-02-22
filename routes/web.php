@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\ReviewController;
@@ -40,7 +41,7 @@ Route::get('/delete/post/{post}', [MainController::class, 'delete']);
 Route::get('/edit/post/{post}', [MainController::class, 'editPost']);
 Route::patch('/storeupdate/{post}', [MainController::class, 'storeUpdate']);
 Route::get('/search', [SearchController::class, 'index']);
-
+Route::post('/addComment', [CommentController::class, 'addComment']);
 
 Auth::routes();
 

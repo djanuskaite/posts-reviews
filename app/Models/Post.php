@@ -8,4 +8,13 @@ class Post extends Model
 {
     protected $fillable = ['first_name', 'last_name', 'gender', 'specialization_id', 'company_id', 'city', 'description', 'img', 'user_id'];
 
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

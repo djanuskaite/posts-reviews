@@ -74,7 +74,7 @@
                     {{Carbon\Carbon::parse($post->created_at)->diffForHumans()}}</h6>
             </div>
             <div class="border p-4">
-                <form method="post" id="" action="/review">
+                <form method="post" id="" action="/addComment">
                     {{csrf_field()}}
                     <div class="stars">
                         <input type="radio" id="r1" name="rating" value="5" style="display:none">
